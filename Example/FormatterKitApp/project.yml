@@ -16,7 +16,7 @@ targets:
     sources:
       - Sources
     dependencies:
-      - package: DateFormatter
+      - package: FormatterKit
 packages:
-  DateFormatter:
+  FormatterKit:
     path: ../../../DateFormatter

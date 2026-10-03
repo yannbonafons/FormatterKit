@@ -1,6 +1,6 @@
 //
 //  DateExtensions.swift
-//  DateFormatter
+//  FormatterKit
 //
 //  Created by Yann Bonafons on 05/04/2026.
 //
