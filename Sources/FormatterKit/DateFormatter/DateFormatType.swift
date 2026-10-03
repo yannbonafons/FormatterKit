@@ -11,15 +11,15 @@ public nonisolated protocol DateFormatTypeProtocol: FormatterProtocol {
     var formatString: String { get }
 }
 
-nonisolated extension DateFormatTypeProtocol {
+public nonisolated extension DateFormatTypeProtocol {
     var specificKeyPart: String {
         formatString
     }
 }
 
 // MARK: - DateFormatType
-
-nonisolated enum DateFormatType: DateFormatTypeProtocol {
+/// Use this directly or declare your own type
+public nonisolated enum DateFormatType: DateFormatTypeProtocol {
     /// "yyyy-MM-dd'T'HH:mm:ssZ"
     case iso8601
     /// "dd/MM/yyyy"
@@ -37,7 +37,7 @@ nonisolated enum DateFormatType: DateFormatTypeProtocol {
     /// Put a custom format
     case custom(String)
 
-    var formatString: String {
+    public var formatString: String {
         switch self {
         case .iso8601:
             "yyyy-MM-dd'T'HH:mm:ssZ"
