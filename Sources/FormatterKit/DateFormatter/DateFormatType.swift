@@ -7,14 +7,13 @@
 
 import Foundation
 
-public nonisolated protocol DateFormatTypeProtocol: Equatable, Sendable {
+public nonisolated protocol DateFormatTypeProtocol: FormatterProtocol {
     var formatString: String { get }
-    var cacheKey: String { get }
 }
 
-public nonisolated extension DateFormatTypeProtocol {
-    var cacheKey: String {
-        "\(String(reflecting: type(of: self)))|\(formatString)"
+nonisolated extension DateFormatTypeProtocol {
+    var specificKeyPart: String {
+        formatString
     }
 }
 

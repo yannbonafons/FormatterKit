@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "DateFormatter",
+    name: "FormatterKit",
     platforms: [
         .iOS(.v17)
     ],
     products: [
         .library(
-            name: "DateFormatter",
-            targets: ["DateFormatter"]
+            name: "FormatterKit",
+            targets: ["FormatterKit"]
         ),
     ],
     dependencies: [
@@ -17,7 +17,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "DateFormatter",
+            name: "FormatterKit",
             swiftSettings: [
                 .enableExperimentalFeature("ApproachableConcurrency"),
                 .defaultIsolation(MainActor.self),
@@ -28,8 +28,8 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "DateFormatterTests",
-            dependencies: ["DateFormatter"],
+            name: "FormatterKitTests",
+            dependencies: ["FormatterKit"],
             swiftSettings: [
                 .enableExperimentalFeature("ApproachableConcurrency"),
                 .defaultIsolation(MainActor.self),

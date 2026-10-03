@@ -1,6 +1,6 @@
-# DateFormatter
+# FormatterKit
 
-A lightweight date formatting helper with formatter caching, locale resolution, and custom format support.
+A lightweight date and price formatting helper with formatter caching, locale resolution, and custom format support.
 
 ## Requirements
 
@@ -14,7 +14,7 @@ A lightweight date formatting helper with formatter caching, locale resolution, 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yannbonafons/DateFormatter", from: "1.0.0")
+    .package(url: "https://github.com/yannbonafons/FormatterKit", from: "1.0.0")
 ]
 ```
 
@@ -30,7 +30,7 @@ dependencies: [
 
 ```swift
 import Foundation
-import DateFormatter
+import FormatterKit
 
 struct APIDateFormat: DateFormatTypeProtocol {
     let formatString: String = "yyyy-MM-dd"
@@ -55,7 +55,7 @@ struct VersionedFormat: DateFormatTypeProtocol {
 
 ```swift
 import Foundation
-import DateFormatter
+import FormatterKit
 
 let manager = DateFormatterManager.shared
 let format = APIDateFormat()

@@ -10,8 +10,11 @@ import Foundation
 // MARK: - DateFormatterManaging
 
 public protocol DateFormatterManaging: AnyObject {
+    /// Convert a date into a String with a given format
     func string(from date: Date, using type: any DateFormatTypeProtocol) -> String
+    /// Parse a date from a string with a given format
     func date(from string: String, using type: any DateFormatTypeProtocol) -> Date?
+    /// Clear all Formatters
     func clearCache()
 }
 
@@ -27,19 +30,18 @@ public final class DateFormatterManager: DateFormatterManaging {
 
     private var cache: [String: DateFormatter] = [:]
     private let lock = NSLock()
+    private var localeResolver: LocaleResolverProtocol = LocaleResolver()
 
     private init() {}
 
     // MARK: - Public API
 
-    /// Convertit une date en String avec le format demandé.
     public func string(from date: Date, using type: any DateFormatTypeProtocol) -> String {
         commit {
             formatter(for: type).string(from: date)
         }
     }
 
-    /// Parse une date depuis une String avec le format demandé.
     public func date(from string: String, using type: any DateFormatTypeProtocol) -> Date? {
         commit {
             formatter(for: type).date(from: string)
@@ -48,7 +50,6 @@ public final class DateFormatterManager: DateFormatterManaging {
 
     // MARK: - Cache Management
 
-    /// Vide entièrement le cache (utile si la locale change à chaud).
     public func clearCache() {
         commit {
             cache.removeAll()
@@ -65,9 +66,9 @@ public final class DateFormatterManager: DateFormatterManaging {
 
     // MARK: - Private Factory
 
-    /// Récupère un `DateFormatter` depuis le cache ou le crée si absent.
+    /// Get a `DateFormatter` from the cache or create one
     private func formatter(for type: any DateFormatTypeProtocol) -> DateFormatter {
-        let key = type.cacheKey
+        let key = type.getCachedKey(localeIdentifier: localeResolver.resolvedLocale.identifier)
 
         if let cached = cache[key] {
             return cached
@@ -78,25 +79,18 @@ public final class DateFormatterManager: DateFormatterManaging {
         return formatter
     }
 
-    /// Renvoie la locale à utiliser pour les formatters.
-    /// Priorité : langue du téléphone si supportée → "en" par défaut.
-    private var resolvedLocale: Locale {
-        // Parcourt les langues préférées de l'utilisateur dans l'ordre
-        for preferredLanguage in Locale.preferredLanguages {
-            // On extrait uniquement le code langue (ex: "fr" depuis "fr-FR")
-            let languageCode = Locale(identifier: preferredLanguage).language.languageCode?.identifier ?? ""
-            let supporedLanguage = Bundle.main.localizations
-            if supporedLanguage.contains(languageCode) {
-                return Locale(identifier: preferredLanguage)
-            }
-        }
-        return Locale(identifier: "en")
-    }
-
     private func makeDateFormatter(for type: any DateFormatTypeProtocol) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = type.formatString
-        formatter.locale = resolvedLocale
+        formatter.locale = localeResolver.resolvedLocale
         return formatter
+    }
+    
+    // MARK: - For testing purpose
+
+    func updateLocaleResolver(localeResolver: LocaleResolverProtocol) {
+        commit {
+            self.localeResolver = localeResolver
+        }
     }
 }

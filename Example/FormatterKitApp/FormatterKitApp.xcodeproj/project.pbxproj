@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ACED97A1FB621BD8A0036288 /* DateFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 8754EA0F86AD886859600D09 /* DateFormatter */; };
-		C1E11891EFC65D141E94D9F1 /* DateFormatterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD758331B98A5507694736E /* DateFormatterApp.swift */; };
+		1C2D8C6F3071052D00FD0E1C /* FormatterKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1C2D8C6E3071052D00FD0E1C /* FormatterKit */; };
+		C1E11891EFC65D141E94D9F1 /* FormatterKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD758331B98A5507694736E /* FormatterKitApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		654B15D45D79B464D65DC5AE /* DateFormatter */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DateFormatter; path = ../..; sourceTree = SOURCE_ROOT; };
-		9AD758331B98A5507694736E /* DateFormatterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterApp.swift; sourceTree = "<group>"; };
-		BD7CEB4691677FAC564BF4A2 /* DateFormatterApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DateFormatterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD758331B98A5507694736E /* FormatterKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterKitApp.swift; sourceTree = "<group>"; };
+		BD7CEB4691677FAC564BF4A2 /* FormatterKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormatterKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,7 +22,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACED97A1FB621BD8A0036288 /* DateFormatter in Frameworks */,
+				1C2D8C6F3071052D00FD0E1C /* FormatterKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +49,7 @@
 		40868AB770A5DDE689016121 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9AD758331B98A5507694736E /* DateFormatterApp.swift */,
+				9AD758331B98A5507694736E /* FormatterKitApp.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 		EA83502D57E40CDE767E2195 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD7CEB4691677FAC564BF4A2 /* DateFormatterApp.app */,
+				BD7CEB4691677FAC564BF4A2 /* FormatterKitApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,9 +65,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A29432B1B2E327EE23E17899 /* DateFormatterApp */ = {
+		A29432B1B2E327EE23E17899 /* FormatterKitApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A57BB842D3DF6903ECB682B /* Build configuration list for PBXNativeTarget "DateFormatterApp" */;
+			buildConfigurationList = 0A57BB842D3DF6903ECB682B /* Build configuration list for PBXNativeTarget "FormatterKitApp" */;
 			buildPhases = (
 				B6D9722AF1205B426684BCF1 /* Sources */,
 				207A7E24212354405CC4A7DB /* Frameworks */,
@@ -76,12 +76,13 @@
 			);
 			dependencies = (
 			);
-			name = DateFormatterApp;
+			name = FormatterKitApp;
 			packageProductDependencies = (
 				8754EA0F86AD886859600D09 /* DateFormatter */,
+				1C2D8C6E3071052D00FD0E1C /* FormatterKit */,
 			);
 			productName = DateFormatterApp;
-			productReference = BD7CEB4691677FAC564BF4A2 /* DateFormatterApp.app */;
+			productReference = BD7CEB4691677FAC564BF4A2 /* FormatterKitApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -91,11 +92,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
+				LastUpgradeCheck = 2710;
 			};
-			buildConfigurationList = BD622515D90B6C1C5AFB81CA /* Build configuration list for PBXProject "DateFormatterApp" */;
+			buildConfigurationList = BD622515D90B6C1C5AFB81CA /* Build configuration list for PBXProject "FormatterKitApp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -105,14 +104,14 @@
 			mainGroup = 3ED0474EF52904A22C2D73FB;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				80800994E530623D3DF6F0FD /* XCLocalSwiftPackageReference "../../../DateFormatter" */,
+				1C2D8C6D3071052D00FD0E1C /* XCLocalSwiftPackageReference "../../../FormatterKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EA83502D57E40CDE767E2195 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A29432B1B2E327EE23E17899 /* DateFormatterApp */,
+				A29432B1B2E327EE23E17899 /* FormatterKitApp */,
 			);
 		};
 /* End PBXProject section */
@@ -122,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E11891EFC65D141E94D9F1 /* DateFormatterApp.swift in Sources */,
+				C1E11891EFC65D141E94D9F1 /* FormatterKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +165,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -185,6 +185,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -203,6 +204,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yannbonafons.DateFormatter;
+				PRODUCT_NAME = FormatterKitApp;
 				SDKROOT = iphoneos;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -249,6 +251,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -261,6 +264,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -279,6 +283,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yannbonafons.DateFormatter;
+				PRODUCT_NAME = FormatterKitApp;
 				SDKROOT = iphoneos;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -291,7 +296,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A57BB842D3DF6903ECB682B /* Build configuration list for PBXNativeTarget "DateFormatterApp" */ = {
+		0A57BB842D3DF6903ECB682B /* Build configuration list for PBXNativeTarget "FormatterKitApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F0E7BA5F2ED996A8062C951F /* Debug */,
@@ -300,7 +305,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		BD622515D90B6C1C5AFB81CA /* Build configuration list for PBXProject "DateFormatterApp" */ = {
+		BD622515D90B6C1C5AFB81CA /* Build configuration list for PBXProject "FormatterKitApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45E924D8DB018D836071AA0A /* Debug */,
@@ -312,13 +317,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		80800994E530623D3DF6F0FD /* XCLocalSwiftPackageReference "../../../DateFormatter" */ = {
+		1C2D8C6D3071052D00FD0E1C /* XCLocalSwiftPackageReference "../../../FormatterKit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../DateFormatter;
+			relativePath = ../../../FormatterKit;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1C2D8C6E3071052D00FD0E1C /* FormatterKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FormatterKit;
+		};
 		8754EA0F86AD886859600D09 /* DateFormatter */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DateFormatter;

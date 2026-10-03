@@ -1,15 +1,15 @@
-# DateFormatter
+# FormatterKit
 
 A lightweight Swift library that wraps `Foundation.DateFormatter` with a thread-safe, cached singleton and convenience extensions on `Date`, `String`, and `TimeInterval`.
 
 ## Project structure
 
 ```
-Sources/DateFormatter/
+Sources/FormatterKit/
   DateFormatType.swift            # DateFormatTypeProtocol + built-in DateFormatType enum
   DateFormatterManager.swift      # Thread-safe singleton (NSLock) with DateFormatter cache
   DateExtensions.swift            # Convenience extensions on Date, String, TimeInterval
-Tests/DateFormatterTests/         # Unit tests (Swift Testing)
+Tests/FormatterKitTests/          # Unit tests (Swift Testing)
 Example/DateFormatterApp/         # Demo app (Xcode project via project.yml / XcodeGen)
 ```
 
