@@ -11,7 +11,7 @@ public nonisolated protocol PriceFormatTypeProtocol: FormatterProtocol {
     var currencyCode: String { get }
 }
 
-nonisolated extension PriceFormatTypeProtocol {
+public nonisolated extension PriceFormatTypeProtocol {
     var specificKeyPart: String {
         currencyCode
     }
